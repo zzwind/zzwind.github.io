@@ -4,17 +4,17 @@
   
   
   <entry>
-    <title>hexo安装 使用</title>
+    <title>Hexo安装 使用</title>
     <link href="/2020/04/10/hexo%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8/"/>
     <url>/2020/04/10/hexo%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p>Hexo的安装和备份还原</p><a id="more"></a><h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre><code class="bash">npm install hexo-cli -ghexo init blogcd blognpm installhexo server</code></pre><h3 id="备份Hexo配置文件"><a href="#备份Hexo配置文件" class="headerlink" title="备份Hexo配置文件"></a>备份Hexo配置文件</h3><p>把Hexo的配置文件和网站文件放在同一个Repositories，通过Branch区分<br>master分支用来放网站静态文件，hexo分支用来放网站的原始配置文件和数据。</p><pre><code class="bash">#初始化git init .#建立新分支hexogit checkout -b hexo#將檔案加入gitgit add .git commit -m &#39;Initial commit&#39;#加入遠端儲存庫位址git remote add origin https://github.com/username/username.github.io.git#將hexo分支推送至遠端儲存庫git push --set-upstream origin hexo</code></pre><p>以后只要隔一段时间提交一下本地配置文件到Github就可以做备份</p><h3 id="还原Hexo配置文件"><a href="#还原Hexo配置文件" class="headerlink" title="还原Hexo配置文件"></a>还原Hexo配置文件</h3><pre><code class="bash">git clone https://github.com/username/username.github.io.gitcd username.github.io/#切換到hexo分支git checkout hexo#依照package.json重新安裝hexo套件npm install#最後啟動hexo server看是不是可以正常瀏覽hexo server</code></pre>]]></content>
     
     
     
     <tags>
       
-      <tag>hexo</tag>
+      <tag>Hexo</tag>
       
     </tags>
     

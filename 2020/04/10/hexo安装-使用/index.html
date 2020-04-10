@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>hexo安装 使用 - WinD</title>
+  <title>Hexo安装 使用 - WinD</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.12.1/css/all.min.css" />
 <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
@@ -133,7 +133,7 @@
                   
                   <span class="post-meta">
                     <i class="far fa-chart-bar"></i>
-                    0 字
+                    237 字
                   </span>
                 
 
@@ -169,7 +169,36 @@
           <div class="post-content mx-auto" id="post">
             
             <div class="markdown-body">
-              
+              <p>Hexo的安装和备份还原</p>
+<a id="more"></a>
+
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre><code class="bash">npm install hexo-cli -g
+hexo init blog
+cd blog
+npm install
+hexo server</code></pre>
+<h3 id="备份Hexo配置文件"><a href="#备份Hexo配置文件" class="headerlink" title="备份Hexo配置文件"></a>备份Hexo配置文件</h3><p>把Hexo的配置文件和网站文件放在同一个Repositories，通过Branch区分<br>master分支用来放网站静态文件，hexo分支用来放网站的原始配置文件和数据。</p>
+<pre><code class="bash">#初始化
+git init .
+#建立新分支hexo
+git checkout -b hexo
+#將檔案加入git
+git add .
+git commit -m &#39;Initial commit&#39;
+#加入遠端儲存庫位址
+git remote add origin https://github.com/username/username.github.io.git
+#將hexo分支推送至遠端儲存庫
+git push --set-upstream origin hexo</code></pre>
+<p>以后只要隔一段时间提交一下本地配置文件到Github就可以做备份</p>
+<h3 id="还原Hexo配置文件"><a href="#还原Hexo配置文件" class="headerlink" title="还原Hexo配置文件"></a>还原Hexo配置文件</h3><pre><code class="bash">git clone https://github.com/username/username.github.io.git
+cd username.github.io/
+#切換到hexo分支
+git checkout hexo
+#依照package.json重新安裝hexo套件
+npm install
+#最後啟動hexo server看是不是可以正常瀏覽
+hexo server</code></pre>
+
             </div>
             <hr>
             <div>
@@ -179,7 +208,7 @@
                   <span>
                 <i class="iconfont icon-tag"></i>
                     
-                      <a class="hover-with-bg" href="/tags/hexo/">hexo</a>
+                      <a class="hover-with-bg" href="/tags/Hexo/">Hexo</a>
                     
                   </span>
                 
@@ -400,7 +429,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "hexo安装 使用&nbsp;",
+        "Hexo安装 使用&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
