@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>Nginx 添加模块</title>
+    <link href="/2020/04/16/Nginx-%E6%B7%BB%E5%8A%A0%E6%A8%A1%E5%9D%97/"/>
+    <url>/2020/04/16/Nginx-%E6%B7%BB%E5%8A%A0%E6%A8%A1%E5%9D%97/</url>
+    
+    <content type="html"><![CDATA[<h2 id="在已经运行的Nginx添加其他模块"><a href="#在已经运行的Nginx添加其他模块" class="headerlink" title="在已经运行的Nginx添加其他模块"></a>在已经运行的Nginx添加其他模块</h2><h3 id="动态模块添加"><a href="#动态模块添加" class="headerlink" title="动态模块添加"></a>动态模块添加</h3><p>先查看已安装Nginx的编译参数:</p><pre><code class="bash">$ nginx -V</code></pre><p>进入Nginx源码包继续操作</p><pre><code class="bash">$ cd nginx-1.x.x$ ./configure --with-compat --add-dynamic-module=/path/to/ngx_brotli$ make modules</code></pre><p>执行结束以后 <code>ngx_http_brotli_filter_module.so</code>  <code>ngx_http_brotli_static_module.so</code> 两个模块会生成在 <code>ojbs</code> 目录里面，复制到 <code>/usr/lib/nginx/modules/</code> 后添加 <code>load_module</code> 在 <code>nginx.conf</code> 文件里。</p><h3 id="静态添加"><a href="#静态添加" class="headerlink" title="静态添加"></a>静态添加</h3><pre><code class="bash">$ cd nginx-1.x.x$ ./configure --add-module=/path/to/ngx_brotli$ make &amp;&amp; make install</code></pre><p>这样就会把模块直接编译进Nginx。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Nginx</tag>
+      
+      <tag>运维</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hexo安装 使用</title>
     <link href="/2020/04/10/hexo%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8/"/>
     <url>/2020/04/10/hexo%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8/</url>

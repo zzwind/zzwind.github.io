@@ -149,6 +149,47 @@
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
+      <a href="/2020/04/16/Nginx-%E6%B7%BB%E5%8A%A0%E6%A8%A1%E5%9D%97/">
+        <p class="h4 index-header">Nginx 添加模块</p>
+      </a>
+
+      <a href="/2020/04/16/Nginx-%E6%B7%BB%E5%8A%A0%E6%A8%A1%E5%9D%97/">
+        
+        
+          
+        
+        <div class="index-excerpt" >
+          <div class="index-text mb-1">在已经运行的Nginx添加其他模块动态模块添加先查看已安装Nginx的编译参数:
+$ nginx -V
+进入Nginx源码包继续操作
+$ cd nginx-1.x.x
+$ ./configure --with-compat --add-dynamic-module=/path/to/ngx_brotli
+$ make modules
+执行结束以后 ngx_http_brotli_filter_module.so  ngx_http_brotli_static_module.so 两个模块会生成在 ojbs 目录里面，复制到 /usr/lib/nginx/modules/ 后添加 load_mo</div>
+        </div>
+      </a>
+
+      <div class="index-btm">
+        
+          <i class="iconfont icon-riqi2"></i>&nbsp;2020-04-16&nbsp;&nbsp;
+        
+        
+        
+          <i class="iconfont icon-tag"></i>
+          
+            <a href="/tags/Nginx/">Nginx</a>&nbsp;
+          
+            <a href="/tags/%E8%BF%90%E7%BB%B4/">运维</a>&nbsp;
+          
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
       <a href="/2020/04/10/hexo%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8/">
         <p class="h4 index-header">Hexo安装 使用</p>
       </a>
